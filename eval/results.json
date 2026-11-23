@@ -1,0 +1,2059 @@
+{
+  "run": {
+    "finished": "2026-11-23T19:23:22+00:00",
+    "chat_deployment": "gpt-4o-mini",
+    "embedding_deployment": "text-embedding-3-small",
+    "temperature": 0,
+    "top_k": 6,
+    "min_similarity": 0.3,
+    "prompt_sha256": "9a7076107852",
+    "new_question_embeddings": 0
+  },
+  "summary": {
+    "answers": {
+      "correct": 16,
+      "total": 23
+    },
+    "citations": {
+      "correct": 15,
+      "total": 23
+    },
+    "refusals": {
+      "correct": 5,
+      "total": 6
+    },
+    "answerable_refused": 2,
+    "errors": 0,
+    "by_type": {
+      "fact": {
+        "answers": {
+          "correct": 3,
+          "total": 4
+        },
+        "citations": {
+          "correct": 4,
+          "total": 4
+        }
+      },
+      "catalogue": {
+        "answers": {
+          "correct": 4,
+          "total": 5
+        },
+        "citations": {
+          "correct": 4,
+          "total": 5
+        }
+      },
+      "dutch": {
+        "answers": {
+          "correct": 2,
+          "total": 5
+        },
+        "citations": {
+          "correct": 2,
+          "total": 5
+        }
+      },
+      "two-documents": {
+        "answers": {
+          "correct": 2,
+          "total": 3
+        },
+        "citations": {
+          "correct": 0,
+          "total": 3
+        }
+      },
+      "unanswerable": {
+        "answers": {
+          "correct": 5,
+          "total": 6
+        },
+        "citations": {
+          "correct": 5,
+          "total": 6
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "What torque for the pump flange bolts?",
+      "type": "fact",
+      "verified": true,
+      "expected_answer": "Suction flange 380 Nm (M20), discharge flange 195 Nm (M16), lubricated; dry ×1.3.",
+      "key_values": [
+        "380 Nm",
+        "195 Nm"
+      ],
+      "expected_sources": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "pages": [
+            11,
+            12
+          ]
+        }
+      ],
+      "answer": "The torque for the HX-400 pump flange bolts is as follows: for the suction flange (DN 150 with M20 bolting), the torque is 380 Nm; for the discharge flange (DN 100 with M16 bolting), the torque is 195 Nm [HX-400 IOM Manual, p. 12]. All torque figures are for lubricated threads [HX-400 IOM Manual, p. 11]. If the threads are dry, the torque values should be multiplied by 1.3 [HX-400 IOM Manual, p. 11].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 12,
+          "page_end": 12
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 11,
+          "page_end": 12
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 11,
+          "page_end": 11
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 12,
+          "page_end": 12,
+          "similarity": 0.7176,
+          "bm25_score": 16.039
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 11,
+          "page_end": 12,
+          "similarity": 0.7109,
+          "bm25_score": 15.932
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 11,
+          "page_end": 11,
+          "similarity": 0.6364,
+          "bm25_score": 12.978
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 68,
+          "page_end": 69,
+          "similarity": 0.6157,
+          "bm25_score": 11.321
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 12,
+          "page_end": 13,
+          "similarity": 0.5504,
+          "bm25_score": 9.97
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 14,
+          "page_end": 15,
+          "similarity": 0.4642,
+          "bm25_score": 13.411
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 2,
+      "question": "Which oil grade should I use?",
+      "type": "fact",
+      "verified": true,
+      "expected_answer": "Halstrom HLP-46 (ISO VG 46 mineral oil).",
+      "key_values": [
+        "HLP-46"
+      ],
+      "expected_sources": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "answer": "Use Halstrom HLP-46, an ISO VG 46 mineral oil with a kinematic viscosity of 46 mm2/s at 40 °C, for the HX-400 pump [HX-400 IOM Manual, p. 20]. If Halstrom HLP-46 is not available, you may use other grades that meet the same specifications, but do not mix oil grades. The alternatives are VG 32 only below 5 °C ambient, and VG 68 only above 40 °C ambient with written approval [HX-400 IOM Manual, p. 36-37].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 20
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 36,
+          "page_end": 37
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 20,
+          "similarity": 0.5085,
+          "bm25_score": 7.543
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 36,
+          "page_end": 37,
+          "similarity": 0.452,
+          "bm25_score": 5.491
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 32,
+          "page_end": 33,
+          "similarity": 0.3309,
+          "bm25_score": 5.494
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 6,
+          "page_end": 7,
+          "similarity": 0.4602,
+          "bm25_score": 2.093
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 21,
+          "similarity": 0.4523,
+          "bm25_score": 2.492
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 24,
+          "page_end": 24,
+          "similarity": 0.3198,
+          "bm25_score": 5.445
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 3,
+      "question": "What does part HX40-SEAL-28S-316 cost?",
+      "type": "catalogue",
+      "verified": true,
+      "expected_answer": "€1284.00, mechanical seal cartridge MS-28 for HX-400/S.",
+      "key_values": [
+        "€1284.00"
+      ],
+      "expected_sources": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "answer": "The cost of part HX40-SEAL-28S-316 is 1284.00 EUR [HX-SPC-2026 Parts Catalogue, p. 48].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 48,
+          "page_end": 48
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 48,
+          "page_end": 48,
+          "similarity": 0.6947,
+          "bm25_score": 4.847
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 5,
+          "page_end": 5,
+          "similarity": 0.6721,
+          "bm25_score": 4.269
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 65,
+          "page_end": 65,
+          "similarity": 0.6679,
+          "bm25_score": 4.337
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 71,
+          "page_end": 72,
+          "similarity": 0.3822,
+          "bm25_score": 6.481
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 9,
+          "page_end": 9,
+          "similarity": 0.289,
+          "bm25_score": 5.062
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 48,
+          "page_end": 48,
+          "similarity": 0.6305,
+          "bm25_score": 4.995
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": false,
+        "missing_sources": [
+          {
+            "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+            "pages": [
+              5
+            ]
+          }
+        ],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 4,
+      "question": "What criticality class is pump P-1201A, and what does it pump?",
+      "type": "dutch",
+      "verified": false,
+      "expected_answer": "Criticality A. P-1201A is an HX-400/S in Gebouw A / Koelwatercentrale, pumping process water (proceswater) in continuous duty. It had 2,237 running hours at the issue date of OV-220.",
+      "key_values": [
+        "Criticality A|class A",
+        "process water|proceswater"
+      ],
+      "expected_sources": [
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "answer": "I don't know, the documents don't cover this.",
+      "answered": false,
+      "error": null,
+      "cited": [],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30,
+          "similarity": 0.3699,
+          "bm25_score": 7.857
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 8,
+          "page_end": 8,
+          "similarity": 0.5453,
+          "bm25_score": 4.866
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 70,
+          "page_end": 70,
+          "similarity": 0.2709,
+          "bm25_score": 6.909
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 35,
+          "page_end": 36,
+          "similarity": 0.5167,
+          "bm25_score": 5.467
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 14,
+          "page_end": 14,
+          "similarity": 0.4009,
+          "bm25_score": 6.523
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 8,
+          "page_end": 8,
+          "similarity": 0.5152,
+          "bm25_score": 3.092
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": false,
+        "missing_key_values": [
+          "Criticality A|class A",
+          "process water|proceswater"
+        ],
+        "citation_correct": false,
+        "missing_sources": [
+          {
+            "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+            "pages": [
+              4
+            ]
+          }
+        ],
+        "expected_pages_retrieved": false,
+        "refused": true,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 5,
+      "question": "Who has to approve postponing the four-yearly overhaul of a pump?",
+      "type": "dutch",
+      "verified": false,
+      "expected_answer": "The maintenance manager, always, using the deferral form in appendix D. The planning tolerance for the four-yearly overhaul is ±3 months.",
+      "key_values": [
+        "maintenance manager"
+      ],
+      "expected_sources": [
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "pages": [
+            7
+          ]
+        }
+      ],
+      "answer": "I don't know, the documents don't cover this.",
+      "answered": false,
+      "error": null,
+      "cited": [],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 19,
+          "page_end": 19,
+          "similarity": 0.5199,
+          "bm25_score": 4.601
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 9,
+          "page_end": 9,
+          "similarity": 0.4914,
+          "bm25_score": 4.564
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 27,
+          "page_end": 27,
+          "similarity": 0.4859,
+          "bm25_score": 5.528
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 11,
+          "page_end": 11,
+          "similarity": 0.5377,
+          "bm25_score": 3.027
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 26,
+          "page_end": 27,
+          "similarity": 0.3735,
+          "bm25_score": 4.947
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 10,
+          "page_end": 11,
+          "similarity": 0.5309,
+          "bm25_score": 3.103
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": false,
+        "missing_key_values": [
+          "maintenance manager"
+        ],
+        "citation_correct": false,
+        "missing_sources": [
+          {
+            "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+            "pages": [
+              7
+            ]
+          }
+        ],
+        "expected_pages_retrieved": false,
+        "refused": true,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 6,
+      "question": "What was the most common pump failure over the last three years?",
+      "type": "dutch",
+      "verified": false,
+      "expected_answer": "Mechanical seal leakage: 34 of the 122 reported failures (28%). The main causes were dry running, pipe strain and operating far from the BEP. Bearing damage came second with 19 (16%).",
+      "key_values": [
+        "seal",
+        "28%"
+      ],
+      "expected_sources": [
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "pages": [
+            33
+          ]
+        }
+      ],
+      "answer": "The most common pump failure over the last three years was leaking shaft seals, accounting for 28% of reported issues. The main causes for this failure include dry running, piping stress, and operating points far from the Best Efficiency Point (BEP) [OV-220 Preventief Onderhoud NL, p. 33].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "page": 33,
+          "page_end": 33
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 6,
+          "page_end": 6,
+          "similarity": 0.4421,
+          "bm25_score": 12.638
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 35,
+          "page_end": 36,
+          "similarity": 0.446,
+          "bm25_score": 9.68
+        },
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "page": 33,
+          "page_end": 33,
+          "similarity": 0.5402,
+          "bm25_score": 0.0
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 8,
+          "page_end": 8,
+          "similarity": 0.4086,
+          "bm25_score": 9.948
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 23,
+          "page_end": 23,
+          "similarity": 0.4858,
+          "bm25_score": 6.73
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 23,
+          "page_end": 23,
+          "similarity": 0.4688,
+          "bm25_score": 2.595
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 7,
+      "question": "Can the maintenance intervals be extended for criticality C pumps?",
+      "type": "dutch",
+      "verified": false,
+      "expected_answer": "Yes. For class C installations the intervals in table 6.1 may be extended by a factor of 1.5, except the oil change, which stays tied to running hours and calendar time (every 4,000 running hours or 12 months, whichever comes first).",
+      "key_values": [
+        "1.5",
+        "oil change"
+      ],
+      "expected_sources": [
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "pages": [
+            3
+          ]
+        }
+      ],
+      "answer": "For criticality C pumps, the maintenance intervals can be extended by a factor of 1.5, except for the oil change, which remains bound to operating hours and calendar time [OV-220 Preventief Onderhoud NL, p. 3].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "page": 3,
+          "page_end": 3
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 19,
+          "page_end": 19,
+          "similarity": 0.6007,
+          "bm25_score": 6.995
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 18,
+          "page_end": 19,
+          "similarity": 0.5655,
+          "bm25_score": 7.591
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 21,
+          "page_end": 21,
+          "similarity": 0.5037,
+          "bm25_score": 8.217
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 16,
+          "page_end": 16,
+          "similarity": 0.507,
+          "bm25_score": 5.037
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 2,
+          "page_end": 2,
+          "similarity": 0.4419,
+          "bm25_score": 8.432
+        },
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "page": 3,
+          "page_end": 3,
+          "similarity": 0.5662,
+          "bm25_score": 0.923
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 8,
+      "question": "Which spare parts must be kept on site for a criticality B pump?",
+      "type": "dutch",
+      "verified": false,
+      "expected_answer": "On site: the seal cartridge, both bearings, the casing gasket and the coupling element. The shaft sleeve and the wear rings are held at the regional store.",
+      "key_values": [
+        "seal",
+        "bearing",
+        "gasket",
+        "coupling element"
+      ],
+      "expected_sources": [
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "answer": "For a criticality B pump, the following spare parts must be kept on site: \n- Bearing cover, drive end: Part number HX4-BCV-DE-01, Qty 1 [HX-400 IOM Manual, p. 30]. \n- Bearing cover, non-drive end: Part number HX4-BCV-NDE-01, Qty 1 [HX-400 IOM Manual, p. 30]. \n- Coupling spacer: Part number HX4-CPL-R90-SP, Qty 1 [HX-400 IOM Manual, p. 30]. \n- Impeller, 385 mm trim: Part number HX4-IMP-316-385, Qty 1 [HX-400 IOM Manual, p. 30]. \n- Casing wear ring: Part number HX4-WRC-316-01, Qty 1 [HX-400 IOM Manual, p. 30]. \n- Impeller wear ring: Part number HX4-WRI-316-01, Qty 1 [HX-400 IOM Manual, p. 30]. \n- Shaft sleeve: Part number HX4-SLV-2205-01, Qty 1 [HX-400 IOM Manual, p. 30].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30,
+          "similarity": 0.6055,
+          "bm25_score": 11.514
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30,
+          "similarity": 0.5358,
+          "bm25_score": 7.254
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30,
+          "similarity": 0.5575,
+          "bm25_score": 6.793
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 31,
+          "similarity": 0.6215,
+          "bm25_score": 5.657
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 2,
+          "page_end": 2,
+          "similarity": 0.5126,
+          "bm25_score": 7.291
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 4,
+          "page_end": 5,
+          "similarity": 0.5111,
+          "bm25_score": 7.291
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": false,
+        "missing_key_values": [
+          "seal",
+          "gasket",
+          "coupling element"
+        ],
+        "citation_correct": false,
+        "missing_sources": [
+          {
+            "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+            "pages": [
+              11
+            ]
+          }
+        ],
+        "expected_pages_retrieved": false,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 9,
+      "question": "At what vibration levels do I need to act on an HX pump, and what do I do at each level?",
+      "type": "two-documents",
+      "verified": false,
+      "expected_answer": "Overall RMS velocity on the bearing housing. 2.8 mm/s is the attention level: measure monthly instead of quarterly. 4.5 mm/s is the alarm: investigate the cause within two weeks and analyse the spectrum. 7.1 mm/s is the trip: take the pump out of service, start the standby pump and investigate before restarting. A rise of more than 1.5 mm/s between two measurements is investigated immediately, even below the alarm level.",
+      "key_values": [
+        "2.8 mm/s",
+        "4.5 mm/s",
+        "7.1 mm/s"
+      ],
+      "expected_sources": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "pages": [
+            14,
+            35
+          ]
+        },
+        {
+          "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "answer": "For the HX pump, you need to act based on the following vibration levels:\n\n1. **Vibration Alarm (E04)**: If the overall RMS vibration is above 4.5 mm/s, you should investigate within two weeks and record a spectrum [HX-400 IOM Manual, p. 35].\n2. **Vibration Trip (E05)**: If the overall RMS vibration exceeds 7.1 mm/s, you must stop the pump and investigate before restarting [HX-400 IOM Manual, p. 35].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 35,
+          "page_end": 35
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 35,
+          "page_end": 35,
+          "similarity": 0.4987,
+          "bm25_score": 14.985
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 4,
+          "page_end": 4,
+          "similarity": 0.5851,
+          "bm25_score": 2.744
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 17,
+          "page_end": 17,
+          "similarity": 0.4422,
+          "bm25_score": 13.513
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 17,
+          "page_end": 17,
+          "similarity": 0.5822,
+          "bm25_score": 1.645
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 35,
+          "page_end": 36,
+          "similarity": 0.5352,
+          "bm25_score": 13.122
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 28,
+          "page_end": 28,
+          "similarity": 0.5674,
+          "bm25_score": 5.129
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": false,
+        "missing_key_values": [
+          "2.8 mm/s"
+        ],
+        "citation_correct": false,
+        "missing_sources": [
+          {
+            "document": "05_OV-220_Preventief_Onderhoud_NL.pdf",
+            "pages": [
+              8
+            ]
+          }
+        ],
+        "expected_pages_retrieved": false,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 10,
+      "question": "What protective equipment do I need for an oil change on an HX-400, and how do I get rid of the old oil?",
+      "type": "two-documents",
+      "verified": false,
+      "expected_answer": "Safety glasses, nitrile gloves (0.11 mm, breakthrough over 480 minutes for mineral oil), safety shoes and a drip tray. The used oil is disposed of as waste oil: EURAL 13 02 05* (waste mineral oil), collected separately.",
+      "key_values": [
+        "safety glasses",
+        "nitrile",
+        "waste oil"
+      ],
+      "expected_sources": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "pages": [
+            5,
+            21
+          ]
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "pages": [
+            4,
+            7
+          ]
+        }
+      ],
+      "answer": "For an oil change on an HX-400, you need the following personal protective equipment: safety glasses, nitrile gloves, safety shoes, and a drip tray [HX-400 IOM Manual, p. 5]. To dispose of the old oil, follow your operating company's waste procedure for waste oil [HX-400 IOM Manual, p. 20].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 21
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 5,
+          "page_end": 5
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 21,
+          "similarity": 0.5797,
+          "bm25_score": 8.329
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 20,
+          "similarity": 0.5385,
+          "bm25_score": 8.027
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 5,
+          "page_end": 5,
+          "similarity": 0.4993,
+          "bm25_score": 11.518
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 20,
+          "similarity": 0.5849,
+          "bm25_score": 4.498
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 2,
+          "page_end": 3,
+          "similarity": 0.3101,
+          "bm25_score": 11.427
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 4,
+          "page_end": 4,
+          "similarity": 0.4798,
+          "bm25_score": 9.086
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": false,
+        "missing_sources": [
+          {
+            "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+            "pages": [
+              4,
+              7
+            ]
+          }
+        ],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 11,
+      "question": "Can I degrease parts with RS-9 solvent inside a 2-metre-deep pump pit, and what breathing protection do I need?",
+      "type": "two-documents",
+      "verified": false,
+      "expected_answer": "Only as a confined space entry. A pump pit deeper than 1.2 m is a confined space, and solvent cleaning makes a pit confined in any case. That means a confined space entry permit, atmospheric testing at three depths (solvent vapour below the 200 ppm 8-hour limit) and forced extraction from the lowest point. Breathing protection must be an air-fed hood; filter masks are not permitted in a confined space. Gloves: 0.4 mm nitrile laminate, changed every 30 minutes.",
+      "key_values": [
+        "confined space",
+        "air-fed"
+      ],
+      "expected_sources": [
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "answer": "You cannot degrease parts with RS-9 solvent inside a 2-metre-deep pump pit without proper respiratory protection. In a confined space like this, you need to use an air-fed hood for respiratory protection, as filters are not permitted in confined spaces [RIS-VGM-0042 Safety Register, p. 4]. Additionally, RS-9 is highly flammable and can cause skin irritation and dizziness, so nitrile gloves and a face shield are also recommended when used in enclosed or poorly ventilated spaces [RIS-VGM-0042 Safety Register, p. 8-9].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 4,
+          "page_end": 4
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 8,
+          "page_end": 9
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 4,
+          "page_end": 4,
+          "similarity": 0.5851,
+          "bm25_score": 19.918
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 8,
+          "page_end": 9,
+          "similarity": 0.5805,
+          "bm25_score": 11.227
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 8,
+          "page_end": 8,
+          "similarity": 0.5666,
+          "bm25_score": 9.899
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 11,
+          "page_end": 11,
+          "similarity": 0.5391,
+          "bm25_score": 10.196
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 8,
+          "page_end": 8,
+          "similarity": 0.5939,
+          "bm25_score": 5.885
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 7,
+          "page_end": 7,
+          "similarity": 0.4781,
+          "bm25_score": 17.336
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": false,
+        "missing_sources": [
+          {
+            "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+            "pages": [
+              7,
+              8
+            ]
+          }
+        ],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 12,
+      "question": "What is in the HX-800/D gasket kit and what does it cost?",
+      "type": "catalogue",
+      "verified": false,
+      "expected_answer": "Kit HX80-KIT-GASK-DPX: casing gasket HX80-GSK-GL-DPX (€38.50), gland gasket HX80-GSK-GLD-DPX (€26.00), sleeve O-ring FKM HX80-ORG-FKM-DPX (€11.20) and tab washer HX80-WSH-TAB-DPX (€14.50). Kit price €82.98, 8% below the sum of the parts.",
+      "key_values": [
+        "€82.98",
+        "HX80-GSK-GL-DPX",
+        "HX80-GSK-GLD-DPX",
+        "HX80-ORG-FKM-DPX",
+        "HX80-WSH-TAB-DPX"
+      ],
+      "expected_sources": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "pages": [
+            56
+          ]
+        }
+      ],
+      "answer": "The HX-800/D gasket kit includes the following items: \n- Casing gasket graphite laminate (Part number: HX80-GSK-GL-DPX) - Price: 38.50 EUR \n- Gland gasket (Part number: HX80-GSK-GLD-DPX) - Price: 26.00 EUR \n- Sleeve O ring FKM (Part number: HX80-ORG-FKM-DPX) - Price: 11.20 EUR \n- Tab washer single use (Part number: HX80-WSH-TAB-DPX) - Price: 14.50 EUR \nThe total kit price is 82.98 EUR, which is 8% below the sum of the parts [HX-SPC-2026 Parts Catalogue, p. 56].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 56,
+          "page_end": 56
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 55,
+          "page_end": 56,
+          "similarity": 0.7316,
+          "bm25_score": 9.249
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 56,
+          "page_end": 56,
+          "similarity": 0.6975,
+          "bm25_score": 10.483
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 56,
+          "page_end": 56,
+          "similarity": 0.6968,
+          "bm25_score": 9.259
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 53,
+          "page_end": 54,
+          "similarity": 0.688,
+          "bm25_score": 9.214
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 53,
+          "page_end": 53,
+          "similarity": 0.728,
+          "bm25_score": 7.985
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 55,
+          "page_end": 55,
+          "similarity": 0.6817,
+          "bm25_score": 9.198
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 13,
+      "question": "Can I still order mechanical seal HX40-SEAL-27S?",
+      "type": "catalogue",
+      "verified": false,
+      "expected_answer": "No. It was superseded by HX40-SEAL-28S on 2026-03-18: the MS-27 seal was replaced by the MS-28, and the new seal is not backward compatible.",
+      "key_values": [
+        "superseded|replaced",
+        "HX40-SEAL-28S"
+      ],
+      "expected_sources": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "pages": [
+            69
+          ]
+        }
+      ],
+      "answer": "You cannot order the mechanical seal HX40-SEAL-27S anymore, as it has been replaced by HX40-SEAL-28S, which is not backward compatible [HX-SPC-2026 Parts Catalogue, p. 69].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 69,
+          "page_end": 69
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 49,
+          "page_end": 49,
+          "similarity": 0.6381,
+          "bm25_score": 4.877
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 46,
+          "page_end": 47,
+          "similarity": 0.6261,
+          "bm25_score": 4.877
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 45,
+          "page_end": 46,
+          "similarity": 0.6242,
+          "bm25_score": 4.877
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 21,
+          "page_end": 21,
+          "similarity": 0.5214,
+          "bm25_score": 7.181
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 5,
+          "page_end": 5,
+          "similarity": 0.6393,
+          "bm25_score": 2.717
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 69,
+          "page_end": 69,
+          "similarity": 0.5864,
+          "bm25_score": 6.518
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 14,
+      "question": "Can I place an emergency order for an HX-400/S volute casing, and how much extra does an emergency order cost?",
+      "type": "catalogue",
+      "verified": false,
+      "expected_answer": "No. Emergency orders are accepted only for class A and class B parts, and the volute casing HX40-CAS-316 is class C (made to order individually). Emergency orders carry a 35% surcharge.",
+      "key_values": [
+        "class C",
+        "35%"
+      ],
+      "expected_sources": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "pages": [
+            70,
+            5
+          ]
+        }
+      ],
+      "answer": "Yes, you can place an emergency order for an HX-400/S volute casing, which has the part number HX40-CAS-316 and costs 7808.40 EUR [HX-SPC-2026 Parts Catalogue, p. 64]. Emergency orders carry a surcharge of 35% [HX-SPC-2026 Parts Catalogue, p. 70].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 64,
+          "page_end": 64
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 70,
+          "page_end": 70
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 64,
+          "page_end": 64,
+          "similarity": 0.5703,
+          "bm25_score": 11.024
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 70,
+          "page_end": 70,
+          "similarity": 0.5397,
+          "bm25_score": 16.19
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 4,
+          "page_end": 5,
+          "similarity": 0.5907,
+          "bm25_score": 7.32
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 71,
+          "page_end": 72,
+          "similarity": 0.2798,
+          "bm25_score": 15.17
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 5,
+          "page_end": 6,
+          "similarity": 0.5903,
+          "bm25_score": 5.918
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 14,
+          "page_end": 15,
+          "similarity": 0.3189,
+          "bm25_score": 13.232
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": false,
+        "missing_key_values": [
+          "class C"
+        ],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 15,
+      "question": "What is the lengthwise foundation bolt spacing for an HX-250 on the standard baseplate?",
+      "type": "catalogue",
+      "verified": false,
+      "expected_answer": "1125 mm (F1, tolerance ±2 mm). The crosswise spacing (F2) is 370 mm and the foundation bolt diameter is 24 mm.",
+      "key_values": [
+        "1125 mm"
+      ],
+      "expected_sources": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "pages": [
+            41
+          ]
+        }
+      ],
+      "answer": "The lengthwise foundation bolt spacing for an HX-250 on the standard baseplate is 1125 mm with a tolerance of +/- 2 mm [HX-SPC-2026 Parts Catalogue, p. 41].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 41,
+          "page_end": 41
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 41,
+          "page_end": 41,
+          "similarity": 0.6886,
+          "bm25_score": 33.167
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 41,
+          "page_end": 42,
+          "similarity": 0.6511,
+          "bm25_score": 31.108
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 42,
+          "page_end": 42,
+          "similarity": 0.6331,
+          "bm25_score": 31.108
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 43,
+          "page_end": 43,
+          "similarity": 0.6375,
+          "bm25_score": 31.108
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 41,
+          "page_end": 41,
+          "similarity": 0.6293,
+          "bm25_score": 15.879
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 28,
+          "page_end": 29,
+          "similarity": 0.5393,
+          "bm25_score": 23.219
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 16,
+      "question": "What oxygen level is acceptable before entering a confined space?",
+      "type": "fact",
+      "verified": false,
+      "expected_answer": "19.5 to 23.5% by volume, measured from outside at three depths: near the opening, at mid-depth and near the bottom.",
+      "key_values": [
+        "19.5",
+        "23.5%"
+      ],
+      "expected_sources": [
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "pages": [
+            7,
+            14
+          ]
+        }
+      ],
+      "answer": "The acceptable oxygen level before entering a confined space is between 19.5 to 23.5 percent by volume [WP-114 Isolation and Confined Space, p. 7]. Oxygen levels above 23.5 percent or below 19.5 percent are considered dangerous [WP-114 Isolation and Confined Space, p. 7-8].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 7,
+          "page_end": 7
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 7,
+          "page_end": 8
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 14,
+          "page_end": 14
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 7,
+          "page_end": 7,
+          "similarity": 0.6713,
+          "bm25_score": 14.078
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 7,
+          "page_end": 8,
+          "similarity": 0.7632,
+          "bm25_score": 13.936
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 8,
+          "page_end": 8,
+          "similarity": 0.6296,
+          "bm25_score": 12.825
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 4,
+          "page_end": 4,
+          "similarity": 0.4782,
+          "bm25_score": 13.887
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 7,
+          "page_end": 7,
+          "similarity": 0.5416,
+          "bm25_score": 11.473
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 14,
+          "page_end": 14,
+          "similarity": 0.4771,
+          "bm25_score": 10.175
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 17,
+      "question": "Which gloves should I wear when working with SC-4 descaler?",
+      "type": "fact",
+      "verified": false,
+      "expected_answer": "Butyl rubber gloves, 0.7 mm (breakthrough over 480 minutes). Never nitrile: the acid penetrates it.",
+      "key_values": [
+        "butyl",
+        "0.7 mm"
+      ],
+      "expected_sources": [
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "pages": [
+            4,
+            13
+          ]
+        }
+      ],
+      "answer": "When working with SC-4 descaler, you should wear butyl rubber gloves, which have a breakthrough time of over 480 minutes. Nitrile gloves should never be used, as the acid penetrates them [RIS-VGM-0042 Safety Register, p. 4].",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 4,
+          "page_end": 4
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 13,
+          "page_end": 14,
+          "similarity": 0.6047,
+          "bm25_score": 14.966
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 4,
+          "page_end": 4,
+          "similarity": 0.6501,
+          "bm25_score": 13.979
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 12,
+          "page_end": 12,
+          "similarity": 0.5456,
+          "bm25_score": 12.582
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 12,
+          "page_end": 12,
+          "similarity": 0.541,
+          "bm25_score": 11.456
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 12,
+          "page_end": 13,
+          "similarity": 0.5116,
+          "bm25_score": 10.461
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 4,
+          "page_end": 4,
+          "similarity": 0.5437,
+          "bm25_score": 6.929
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": false,
+        "missing_key_values": [
+          "0.7 mm"
+        ],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": true,
+        "refused": false,
+        "refusal_correct": null
+      }
+    },
+    {
+      "id": 18,
+      "question": "How long is the warranty on a new HX-400 pump?",
+      "type": "unanswerable",
+      "verified": false,
+      "expected_answer": "The documents don't say. No warranty period or terms are given. The IOM only says that use outside the stated limits voids the warranty, and that the warranty depends on being able to show that commissioning was carried out.",
+      "key_values": [],
+      "expected_sources": [],
+      "answer": "I don't know, the documents don't cover this.",
+      "answered": false,
+      "error": null,
+      "cited": [],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 4,
+          "page_end": 4,
+          "similarity": 0.6174,
+          "bm25_score": 10.1
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 1,
+          "page_end": 1,
+          "similarity": 0.5831,
+          "bm25_score": 5.345
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 17,
+          "page_end": 18,
+          "similarity": 0.3001,
+          "bm25_score": 7.184
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 8,
+          "page_end": 8,
+          "similarity": 0.614,
+          "bm25_score": 2.782
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 4,
+          "page_end": 4,
+          "similarity": 0.2371,
+          "bm25_score": 6.64
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 27,
+          "page_end": 27,
+          "similarity": 0.4167,
+          "bm25_score": 6.606
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": null,
+        "refused": true,
+        "refusal_correct": true
+      }
+    },
+    {
+      "id": 19,
+      "question": "What is the minimum speed I can set on a variable speed drive for the HX-400?",
+      "type": "unanswerable",
+      "verified": false,
+      "expected_answer": "The documents don't say. The IOM only suggests fitting a variable speed drive instead of starting the motor more than 6 times per hour, and lists VFD-related faults; it gives no drive settings or minimum speed.",
+      "key_values": [],
+      "expected_sources": [],
+      "answer": "The minimum speed for the HX-400 with a 400 mm impeller is 1450 RPM, which corresponds to a minimum continuous flow of 18 m3/h (15% of Best Efficiency Point) [HX-SPC-2026 Parts Catalogue, p. 26]. For the HX-400 with a 320 mm impeller, the minimum continuous flow is 29 m3/h (15% of Best Efficiency Point) at a speed of 2900 RPM [HX-SPC-2026 Parts Catalogue, p. 25-26]. The documents do not specify a minimum speed for the variable speed drive directly, only the performance data at specific speeds.",
+      "answered": true,
+      "error": null,
+      "cited": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 26,
+          "page_end": 26
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 25,
+          "page_end": 26
+        }
+      ],
+      "retrieved": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 26,
+          "page_end": 26,
+          "similarity": 0.5312,
+          "bm25_score": 7.295
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 25,
+          "page_end": 26,
+          "similarity": 0.528,
+          "bm25_score": 7.295
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 14,
+          "page_end": 15,
+          "similarity": 0.4261,
+          "bm25_score": 10.427
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 74,
+          "page_end": 75,
+          "similarity": 0.5699,
+          "bm25_score": 5.552
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 23,
+          "page_end": 23,
+          "similarity": 0.5276,
+          "bm25_score": 7.295
+        },
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 75,
+          "page_end": 75,
+          "similarity": 0.5688,
+          "bm25_score": 5.552
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": false,
+        "missing_key_values": [],
+        "citation_correct": false,
+        "missing_sources": [],
+        "expected_pages_retrieved": null,
+        "refused": false,
+        "refusal_correct": false
+      }
+    },
+    {
+      "id": 20,
+      "question": "What is the oil change interval for a KSB pump?",
+      "type": "unanswerable",
+      "verified": false,
+      "expected_answer": "The documents don't say. They cover only Halstrom HX-series pumps; OV-220 states that pumps of other makes fall under OV-221, which is not in the document set.",
+      "key_values": [],
+      "expected_sources": [],
+      "answer": "I don't know, the documents don't cover this.",
+      "answered": false,
+      "error": null,
+      "cited": [],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 18,
+          "page_end": 19,
+          "similarity": 0.5452,
+          "bm25_score": 7.502
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 16,
+          "page_end": 16,
+          "similarity": 0.5362,
+          "bm25_score": 7.097
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 21,
+          "page_end": 21,
+          "similarity": 0.5024,
+          "bm25_score": 7.223
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 20,
+          "similarity": 0.5074,
+          "bm25_score": 7.06
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 27,
+          "page_end": 27,
+          "similarity": 0.4718,
+          "bm25_score": 6.493
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 11,
+          "page_end": 11,
+          "similarity": 0.4712,
+          "bm25_score": 6.217
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [
+        "The question names ['KSB'], which no chunk mentions; replying NO_ANSWER."
+      ],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": null,
+        "refused": true,
+        "refusal_correct": true
+      }
+    },
+    {
+      "id": 21,
+      "question": "How much oil does the HX-500 take?",
+      "type": "unanswerable",
+      "verified": false,
+      "expected_answer": "The documents don't say: there is no HX-500. The HX range is HX-250, HX-400, HX-630 and HX-800 (fill volumes 0.45, 0.90, 2.10 and 3.80 litres).",
+      "key_values": [],
+      "expected_sources": [],
+      "answer": "I don't know, the documents don't cover this.",
+      "answered": false,
+      "error": null,
+      "cited": [],
+      "retrieved": [
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 8,
+          "page_end": 8,
+          "similarity": 0.5218,
+          "bm25_score": 6.76
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 11,
+          "page_end": 11,
+          "similarity": 0.3733,
+          "bm25_score": 6.924
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 20,
+          "similarity": 0.6303,
+          "bm25_score": 1.479
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 28,
+          "page_end": 28,
+          "similarity": 0.5333,
+          "bm25_score": 0.0
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 12,
+          "page_end": 12,
+          "similarity": 0.4102,
+          "bm25_score": 6.68
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30,
+          "similarity": 0.5319,
+          "bm25_score": 1.592
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": null,
+        "refused": true,
+        "refusal_correct": true
+      }
+    },
+    {
+      "id": 22,
+      "question": "What is the phone number of the Halstrom spare parts department?",
+      "type": "unanswerable",
+      "verified": false,
+      "expected_answer": "The documents don't say. The IOM gives only an email address for spare parts (parts@halstrom-pompen.example) and the postal address in Zwolle; no Halstrom phone numbers are listed.",
+      "key_values": [],
+      "expected_sources": [],
+      "answer": "I don't know, the documents don't cover this.",
+      "answered": false,
+      "error": null,
+      "cited": [],
+      "retrieved": [
+        {
+          "document": "04_HX-SPC-2026_Parts_Catalogue.pdf",
+          "page": 1,
+          "page_end": 1,
+          "similarity": 0.545,
+          "bm25_score": 8.344
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 5,
+          "page_end": 5,
+          "similarity": 0.4456,
+          "bm25_score": 7.947
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30,
+          "similarity": 0.4364,
+          "bm25_score": 6.336
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 30,
+          "page_end": 30,
+          "similarity": 0.4538,
+          "bm25_score": 4.793
+        },
+        {
+          "document": "03_WP-114_Isolation_and_Confined_Space.pdf",
+          "page": 6,
+          "page_end": 6,
+          "similarity": 0.1678,
+          "bm25_score": 6.628
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 33,
+          "page_end": 35,
+          "similarity": 0.4521,
+          "bm25_score": 5.148
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": null,
+        "refused": true,
+        "refusal_correct": true
+      }
+    },
+    {
+      "id": 23,
+      "question": "What does a 20-litre can of Halstrom HLP-46 oil cost?",
+      "type": "unanswerable",
+      "verified": false,
+      "expected_answer": "The documents don't say. The parts catalogue lists no lubricants or prices for them; the safety register only says 20-litre cans are carried on the service vans.",
+      "key_values": [],
+      "expected_sources": [],
+      "answer": "I don't know, the documents don't cover this.",
+      "answered": false,
+      "error": null,
+      "cited": [],
+      "retrieved": [
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 6,
+          "page_end": 7,
+          "similarity": 0.6026,
+          "bm25_score": 8.407
+        },
+        {
+          "document": "02_RIS-VGM-0042_Safety_Register.pdf",
+          "page": 6,
+          "page_end": 6,
+          "similarity": 0.5304,
+          "bm25_score": 7.994
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 21,
+          "similarity": 0.4801,
+          "bm25_score": 7.162
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 20,
+          "page_end": 20,
+          "similarity": 0.5425,
+          "bm25_score": 4.888
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 15,
+          "page_end": 15,
+          "similarity": 0.2753,
+          "bm25_score": 7.93
+        },
+        {
+          "document": "01_HX-400_IOM_Manual.pdf",
+          "page": 27,
+          "page_end": 27,
+          "similarity": 0.4333,
+          "bm25_score": 7.449
+        }
+      ],
+      "reached_model": true,
+      "backend_warnings": [],
+      "checks": {
+        "answer_correct": true,
+        "missing_key_values": [],
+        "citation_correct": true,
+        "missing_sources": [],
+        "expected_pages_retrieved": null,
+        "refused": true,
+        "refusal_correct": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "question": "What torque for the pump flange bolts?",
+    "expected_answer": "Suction flange 380 Nm (M20), discharge flange 195 Nm (M16), lubricated; dry ×1.3.",
+    "key_values": ["380 Nm", "195 Nm"],
+    "source": [{"document": "01_HX-400_IOM_Manual.pdf", "pages": [11, 12]}],
+    "type": "fact",
+    "verified": true,
+    "notes": "The answer must give both values."
+  },
+  {
+    "question": "Which oil grade should I use?",
+    "expected_answer": "Halstrom HLP-46 (ISO VG 46 mineral oil).",
+    "key_values": ["HLP-46"],
+    "source": [{"document": "01_HX-400_IOM_Manual.pdf", "pages": [20]}],
+    "type": "fact",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "question": "What does part HX40-SEAL-28S-316 cost?",
+    "expected_answer": "€1284.00, mechanical seal cartridge MS-28 for HX-400/S.",
+    "key_values": ["€1284.00"],
+    "source": [{"document": "04_HX-SPC-2026_Parts_Catalogue.pdf", "pages": [5]}],
+    "type": "catalogue",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "question": "What criticality class is pump P-1201A, and what does it pump?",
+    "expected_answer": "Criticality A. P-1201A is an HX-400/S in Gebouw A / Koelwatercentrale, pumping process water (proceswater) in continuous duty. It had 2,237 running hours at the issue date of OV-220.",
+    "key_values": ["Criticality A|class A", "process water|proceswater"],
+    "source": [{"document": "05_OV-220_Preventief_Onderhoud_NL.pdf", "pages": [4]}],
+    "type": "dutch",
+    "verified": false,
+    "notes": "Installation register, table 5.1. The tag also appears in the annual plan (table 16.1, p.30)."
+  },
+  {
+    "question": "Who has to approve postponing the four-yearly overhaul of a pump?",
+    "expected_answer": "The maintenance manager, always, using the deferral form in appendix D. The planning tolerance for the four-yearly overhaul is ±3 months.",
+    "key_values": ["maintenance manager"],
+    "source": [{"document": "05_OV-220_Preventief_Onderhoud_NL.pdf", "pages": [7]}],
+    "type": "dutch",
+    "verified": false,
+    "notes": "Table 6.2. The deferral form itself (appendix D, p.29) repeats that the maintenance manager's approval is mandatory for class A and for the four-yearly overhaul."
+  },
+  {
+    "question": "What was the most common pump failure over the last three years?",
+    "expected_answer": "Mechanical seal leakage: 34 of the 122 reported failures (28%). The main causes were dry running, pipe strain and operating far from the BEP. Bearing damage came second with 19 (16%).",
+    "key_values": ["seal", "28%"],
+    "source": [{"document": "05_OV-220_Preventief_Onderhoud_NL.pdf", "pages": [33]}],
+    "type": "dutch",
+    "verified": false,
+    "notes": "Failure analysis, table 17.1."
+  },
+  {
+    "question": "Can the maintenance intervals be extended for criticality C pumps?",
+    "expected_answer": "Yes. For class C installations the intervals in table 6.1 may be extended by a factor of 1.5, except the oil change, which stays tied to running hours and calendar time (every 4,000 running hours or 12 months, whichever comes first).",
+    "key_values": ["1.5", "oil change"],
+    "source": [{"document": "05_OV-220_Preventief_Onderhoud_NL.pdf", "pages": [3]}],
+    "type": "dutch",
+    "verified": false,
+    "notes": "The oil-change rule is on p.7. The annual plan tables on p.30-32 list 8,000 h (once 12,000 h) oil intervals for many pumps, which contradicts this rule; an answer quoting 8,000 h comes from those tables."
+  },
+  {
+    "question": "Which spare parts must be kept on site for a criticality B pump?",
+    "expected_answer": "On site: the seal cartridge, both bearings, the casing gasket and the coupling element. The shaft sleeve and the wear rings are held at the regional store.",
+    "key_values": ["seal", "bearing", "gasket", "coupling element"],
+    "source": [{"document": "05_OV-220_Preventief_Onderhoud_NL.pdf", "pages": [11]}],
+    "type": "dutch",
+    "verified": false,
+    "notes": "Table 12.1 (minimum stock). The IOM has a different list of recommended spares (p.31); this question is about OV-220's criticality classes."
+  },
+  {
+    "question": "At what vibration levels do I need to act on an HX pump, and what do I do at each level?",
+    "expected_answer": "Overall RMS velocity on the bearing housing. 2.8 mm/s is the attention level: measure monthly instead of quarterly. 4.5 mm/s is the alarm: investigate the cause within two weeks and analyse the spectrum. 7.1 mm/s is the trip: take the pump out of service, start the standby pump and investigate before restarting. A rise of more than 1.5 mm/s between two measurements is investigated immediately, even below the alarm level.",
+    "key_values": ["2.8 mm/s", "4.5 mm/s", "7.1 mm/s"],
+    "source": [
+      {"document": "01_HX-400_IOM_Manual.pdf", "pages": [14, 35]},
+      {"document": "05_OV-220_Preventief_Onderhoud_NL.pdf", "pages": [8]}
+    ],
+    "type": "two-documents",
+    "verified": false,
+    "notes": "The 4.5 and 7.1 mm/s limits are in the IOM (table 6.1, fault codes E04/E05) and in the catalogue data sheets (p.13-16). The 2.8 mm/s attention level and the 1.5 mm/s step change are only in OV-220 (table 8.1)."
+  },
+  {
+    "question": "What protective equipment do I need for an oil change on an HX-400, and how do I get rid of the old oil?",
+    "expected_answer": "Safety glasses, nitrile gloves (0.11 mm, breakthrough over 480 minutes for mineral oil), safety shoes and a drip tray. The used oil is disposed of as waste oil: EURAL 13 02 05* (waste mineral oil), collected separately.",
+    "key_values": ["safety glasses", "nitrile", "waste oil"],
+    "source": [
+      {"document": "01_HX-400_IOM_Manual.pdf", "pages": [5, 21]},
+      {"document": "02_RIS-VGM-0042_Safety_Register.pdf", "pages": [4, 7]}
+    ],
+    "type": "two-documents",
+    "verified": false,
+    "notes": "PPE by task is IOM table 1.2 (p.5); the IOM oil-change step 10 (p.21) only says 'dispose as waste oil'. The glove spec (table 4.1, p.4) and the waste code (HLP-46 data sheet, p.7) are in the safety register."
+  },
+  {
+    "question": "Can I degrease parts with RS-9 solvent inside a 2-metre-deep pump pit, and what breathing protection do I need?",
+    "expected_answer": "Only as a confined space entry. A pump pit deeper than 1.2 m is a confined space, and solvent cleaning makes a pit confined in any case. That means a confined space entry permit, atmospheric testing at three depths (solvent vapour below the 200 ppm 8-hour limit) and forced extraction from the lowest point. Breathing protection must be an air-fed hood; filter masks are not permitted in a confined space. Gloves: 0.4 mm nitrile laminate, changed every 30 minutes.",
+    "key_values": ["confined space", "air-fed"],
+    "source": [
+      {"document": "03_WP-114_Isolation_and_Confined_Space.pdf", "pages": [7, 8]},
+      {"document": "02_RIS-VGM-0042_Safety_Register.pdf", "pages": [4]}
+    ],
+    "type": "two-documents",
+    "verified": false,
+    "notes": "WP-114 section 6 (what counts as confined, atmosphere limits, ventilation) plus safety register tables 4.1 and 4.2 (gloves, respiratory protection)."
+  },
+  {
+    "question": "What is in the HX-800/D gasket kit and what does it cost?",
+    "expected_answer": "Kit HX80-KIT-GASK-DPX: casing gasket HX80-GSK-GL-DPX (€38.50), gland gasket HX80-GSK-GLD-DPX (€26.00), sleeve O-ring FKM HX80-ORG-FKM-DPX (€11.20) and tab washer HX80-WSH-TAB-DPX (€14.50). Kit price €82.98, 8% below the sum of the parts.",
+    "key_values": ["€82.98", "HX80-GSK-GL-DPX", "HX80-GSK-GLD-DPX", "HX80-ORG-FKM-DPX", "HX80-WSH-TAB-DPX"],
+    "source": [{"document": "04_HX-SPC-2026_Parts_Catalogue.pdf", "pages": [56]}],
+    "type": "catalogue",
+    "verified": false,
+    "notes": "Page 56 starts with the end of the HX-800/D kits and then switches to Section 12 (all models), so this also checks the product-group chunking."
+  },
+  {
+    "question": "Can I still order mechanical seal HX40-SEAL-27S?",
+    "expected_answer": "No. It was superseded by HX40-SEAL-28S on 2026-03-18: the MS-27 seal was replaced by the MS-28, and the new seal is not backward compatible.",
+    "key_values": ["superseded|replaced", "HX40-SEAL-28S"],
+    "source": [{"document": "04_HX-SPC-2026_Parts_Catalogue.pdf", "pages": [69]}],
+    "type": "catalogue",
+    "verified": false,
+    "notes": "Section 10, supersession and cross reference."
+  },
+  {
+    "question": "Can I place an emergency order for an HX-400/S volute casing, and how much extra does an emergency order cost?",
+    "expected_answer": "No. Emergency orders are accepted only for class A and class B parts, and the volute casing HX40-CAS-316 is class C (made to order individually). Emergency orders carry a 35% surcharge.",
+    "key_values": ["class C", "35%"],
+    "source": [{"document": "04_HX-SPC-2026_Parts_Catalogue.pdf", "pages": [70, 5]}],
+    "type": "catalogue",
+    "verified": false,
+    "notes": "Needs two catalogue pages: the ordering conditions (Section 11, p.70) and the class column of the HX-400/S parts list (p.5)."
+  },
+  {
+    "question": "What is the lengthwise foundation bolt spacing for an HX-250 on the standard baseplate?",
+    "expected_answer": "1125 mm (F1, tolerance ±2 mm). The crosswise spacing (F2) is 370 mm and the foundation bolt diameter is 24 mm.",
+    "key_values": ["1125 mm"],
+    "source": [{"document": "04_HX-SPC-2026_Parts_Catalogue.pdf", "pages": [41]}],
+    "type": "catalogue",
+    "verified": false,
+    "notes": "Page 41 also holds the HX-400 dimensional table (F1 = 1520 mm). An answer of 1520 mm means the wrong product group was used."
+  },
+  {
+    "question": "What oxygen level is acceptable before entering a confined space?",
+    "expected_answer": "19.5 to 23.5% by volume, measured from outside at three depths: near the opening, at mid-depth and near the bottom.",
+    "key_values": ["19.5", "23.5%"],
+    "source": [{"document": "03_WP-114_Isolation_and_Confined_Space.pdf", "pages": [7, 14]}],
+    "type": "fact",
+    "verified": false,
+    "notes": "Table 6.1 (p.7) and the quick reference card (p.14). P.8 adds that oxygen above 23.5% is as dangerous as below 19.5%."
+  },
+  {
+    "question": "Which gloves should I wear when working with SC-4 descaler?",
+    "expected_answer": "Butyl rubber gloves, 0.7 mm (breakthrough over 480 minutes). Never nitrile: the acid penetrates it.",
+    "key_values": ["butyl", "0.7 mm"],
+    "source": [{"document": "02_RIS-VGM-0042_Safety_Register.pdf", "pages": [4, 13]}],
+    "type": "fact",
+    "verified": false,
+    "notes": "Glove table 4.1 (p.4) and the SC-4 data sheet PPE line (p.13)."
+  },
+  {
+    "question": "How long is the warranty on a new HX-400 pump?",
+    "expected_answer": "The documents don't say. No warranty period or terms are given. The IOM only says that use outside the stated limits voids the warranty, and that the warranty depends on being able to show that commissioning was carried out.",
+    "key_values": [],
+    "source": [],
+    "type": "unanswerable",
+    "verified": false,
+    "notes": "The warranty is mentioned only on IOM p.4 and p.15. The catalogue's Section 11 (p.70) covers returns within 30 days, not warranty. The answer must not invent a period."
+  },
+  {
+    "question": "What is the minimum speed I can set on a variable speed drive for the HX-400?",
+    "expected_answer": "The documents don't say. The IOM only suggests fitting a variable speed drive instead of starting the motor more than 6 times per hour, and lists VFD-related faults; it gives no drive settings or minimum speed.",
+    "key_values": [],
+    "source": [],
+    "type": "unanswerable",
+    "verified": false,
+    "notes": "IOM p.14 and p.23-24 mention drives. Catalogue Annex A (p.73-77) covers a fixed 60 Hz supply, not variable speed. The 15% of BEP minimum flow is not a minimum speed."
+  },
+  {
+    "question": "What is the oil change interval for a KSB pump?",
+    "expected_answer": "The documents don't say. They cover only Halstrom HX-series pumps; OV-220 states that pumps of other makes fall under OV-221, which is not in the document set.",
+    "key_values": [],
+    "source": [],
+    "type": "unanswerable",
+    "verified": false,
+    "notes": "OV-220 p.2 points to OV-221. Answering 4,000 h / 12 months is wrong: that interval applies to HX pumps only."
+  },
+  {
+    "question": "How much oil does the HX-500 take?",
+    "expected_answer": "The documents don't say: there is no HX-500. The HX range is HX-250, HX-400, HX-630 and HX-800 (fill volumes 0.45, 0.90, 2.10 and 3.80 litres).",
+    "key_values": [],
+    "source": [],
+    "type": "unanswerable",
+    "verified": false,
+    "notes": "The answer must not interpolate between the HX-400 and HX-630 figures."
+  },
+  {
+    "question": "What is the phone number of the Halstrom spare parts department?",
+    "expected_answer": "The documents don't say. The IOM gives only an email address for spare parts (parts@halstrom-pompen.example) and the postal address in Zwolle; no Halstrom phone numbers are listed.",
+    "key_values": [],
+    "source": [],
+    "type": "unanswerable",
+    "verified": false,
+    "notes": "Contacts are in IOM appendix F (p.33-34). The phone numbers in the safety register (p.6-12 data sheets and p.15, e.g. +31 (0)10 555 0199) belong to Rendell's 24-hour duty supervisor and VGM coordinator, not to the Halstrom parts desk."
+  },
+  {
+    "question": "What does a 20-litre can of Halstrom HLP-46 oil cost?",
+    "expected_answer": "The documents don't say. The parts catalogue lists no lubricants or prices for them; the safety register only says 20-litre cans are carried on the service vans.",
+    "key_values": [],
+    "source": [],
+    "type": "unanswerable",
+    "verified": false,
+    "notes": "Safety register p.5-6 mention the 20-litre cans. The catalogue has no part number for oil."
+  }
+]
