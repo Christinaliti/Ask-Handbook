@@ -76,7 +76,6 @@ cp backend/.env.example backend/.env
 Open `backend/.env` and add the Azure OpenAI credentials
 provided for the assignment.
 
-Never commit `.env` or any real API credentials.
 
 ### 4. Start the backend
 
